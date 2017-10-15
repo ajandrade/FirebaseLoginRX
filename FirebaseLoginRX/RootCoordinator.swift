@@ -21,7 +21,9 @@ final class RootCoordinator {
     navController.setNavigationBarHidden(true, animated: false)
     return navController
   }()
-    
+  
+  fileprivate let networkServices = NetworkDependencies()
+  
   // MARK: - INITIALIZER
   
   init(window: UIWindow) {
@@ -35,7 +37,7 @@ final class RootCoordinator {
 extension RootCoordinator: Coordinator {
   
   func start() {
-    let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+    let loginCoordinator = LoginCoordinator(navigationController: navigationController, networkServices: networkServices)
     loginCoordinator.start()
   }
   

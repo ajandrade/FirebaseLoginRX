@@ -13,11 +13,13 @@ final class LoginCoordinator {
   // MARK: - DEPENDENCIES
   
   fileprivate let navigationController: UINavigationController
+  fileprivate let networkServices: NetworkDependencies
   
   // MARK: - INITIALIZER
   
-  init(navigationController: UINavigationController) {
+  init(navigationController: UINavigationController, networkServices: NetworkDependencies) {
     self.navigationController = navigationController
+    self.networkServices = networkServices
   }
   
 }
@@ -26,7 +28,7 @@ extension LoginCoordinator: Coordinator {
   
   func start() {
     let loginViewController = LoginViewController()
-    let loginViewModel = LoginViewModel()
+    let loginViewModel = LoginViewModel(networkDependencies: networkServices)
     loginViewController.viewModel = loginViewModel
     navigationController.viewControllers = [loginViewController]
   }

@@ -12,4 +12,16 @@ protocol LoginViewModelType {
 
 struct LoginViewModel: LoginViewModelType {
   
+  // MARK: - DEPENDENCIES
+  
+  typealias LoginNetworkDependencies = HasLoginService
+  
+  private let networkDependencies: LoginNetworkDependencies
+
+  // MARK: - INITIALIZER
+
+  init(networkDependencies: NetworkDependencies) {
+    self.networkDependencies = networkDependencies
+  }
+  
 }

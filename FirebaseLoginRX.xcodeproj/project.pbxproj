@@ -15,6 +15,9 @@
 		E06ECBE51F93B53000C7D717 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06ECBE31F93B53000C7D717 /* LoginViewController.xib */; };
 		E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */; };
 		E06ECBE91F93B6DF00C7D717 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE81F93B6DF00C7D717 /* LoginViewModel.swift */; };
+		E06ECBEB1F93B75C00C7D717 /* Roundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBEA1F93B75C00C7D717 /* Roundable.swift */; };
+		E06ECBED1F93B77100C7D717 /* Bordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBEC1F93B77100C7D717 /* Bordable.swift */; };
+		E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBEF1F93B79300C7D717 /* UIView.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -29,6 +32,9 @@
 		E06ECBE31F93B53000C7D717 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		E06ECBE81F93B6DF00C7D717 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E06ECBEA1F93B75C00C7D717 /* Roundable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roundable.swift; sourceTree = "<group>"; };
+		E06ECBEC1F93B77100C7D717 /* Bordable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bordable.swift; sourceTree = "<group>"; };
+		E06ECBEF1F93B79300C7D717 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 		E06ECBD51F93B40000C7D717 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECBEE1F93B77900C7D717 /* UI */,
 				E06ECBE01F93B51A00C7D717 /* Coordinator.swift */,
 			);
 			name = Protocols;
@@ -94,6 +101,7 @@
 		E06ECBD61F93B40800C7D717 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECBEF1F93B79300C7D717 /* UIView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -137,6 +145,15 @@
 			children = (
 			);
 			name = LoginFinished;
+			sourceTree = "<group>";
+		};
+		E06ECBEE1F93B77900C7D717 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E06ECBEA1F93B75C00C7D717 /* Roundable.swift */,
+				E06ECBEC1F93B77100C7D717 /* Bordable.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		E0EF6BB71F93AFB1009E9325 = {
@@ -341,9 +358,12 @@
 			files = (
 				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
 				E06ECBDF1F93B4F700C7D717 /* RootCoordinator.swift in Sources */,
+				E06ECBEB1F93B75C00C7D717 /* Roundable.swift in Sources */,
 				E06ECBE91F93B6DF00C7D717 /* LoginViewModel.swift in Sources */,
+				E06ECBED1F93B77100C7D717 /* Bordable.swift in Sources */,
 				E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */,
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
+				E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */,
 				E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

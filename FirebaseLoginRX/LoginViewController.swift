@@ -19,8 +19,12 @@ class LoginViewController: UIViewController {
   
   // MARK: - IBOUTLETS
   
-  @IBOutlet private weak var emailTextField: UITextField!
-  @IBOutlet private weak var passTextField: UITextField!
+  @IBOutlet private weak var emailTextField: UITextField! {
+    didSet { emailTextField.round(withRadius: 5.0) }
+  }
+  @IBOutlet private weak var passTextField: UITextField! {
+    didSet { passTextField.round(withRadius: 5.0) }
+  }
   @IBOutlet private weak var loginButton: UIButton!
   @IBOutlet private weak var facebookButton: UIButton!
   @IBOutlet private weak var googleButton: UIButton!

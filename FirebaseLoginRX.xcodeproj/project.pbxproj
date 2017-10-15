@@ -34,6 +34,7 @@
 		E06ECC261F93C75900C7D717 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC251F93C75900C7D717 /* UserService.swift */; };
 		E06ECC281F93C78000C7D717 /* NetworkDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */; };
 		E06ECC2A1F93EAE500C7D717 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC291F93EAE500C7D717 /* EmailHelper.swift */; };
+		E06ECC2C1F93ECAB00C7D717 /* CustomSpinnerViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC2B1F93ECAB00C7D717 /* CustomSpinnerViewable.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		E06ECC251F93C75900C7D717 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDependencies.swift; sourceTree = "<group>"; };
 		E06ECC291F93EAE500C7D717 /* EmailHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		E06ECC2B1F93ECAB00C7D717 /* CustomSpinnerViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSpinnerViewable.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */,
 				E06ECC211F93C71500C7D717 /* Loggable.swift */,
 				E06ECC231F93C74C00C7D717 /* NetworkServiceProtocols.swift */,
+				E06ECC2B1F93ECAB00C7D717 /* CustomSpinnerViewable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				E06ECC281F93C78000C7D717 /* NetworkDependencies.swift in Sources */,
 				E06ECBF41F93BC0F00C7D717 /* FacebookTokenFetcher.swift in Sources */,
 				E06ECBFD1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift in Sources */,
+				E06ECC2C1F93ECAB00C7D717 /* CustomSpinnerViewable.swift in Sources */,
 				E06ECC261F93C75900C7D717 /* UserService.swift in Sources */,
 				E06ECBF81F93BC4600C7D717 /* GoogleTokenFetcher.swift in Sources */,
 				E06ECBDF1F93B4F700C7D717 /* RootCoordinator.swift in Sources */,

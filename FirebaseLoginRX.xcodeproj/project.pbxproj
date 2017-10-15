@@ -33,6 +33,7 @@
 		E06ECC241F93C74C00C7D717 /* NetworkServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC231F93C74C00C7D717 /* NetworkServiceProtocols.swift */; };
 		E06ECC261F93C75900C7D717 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC251F93C75900C7D717 /* UserService.swift */; };
 		E06ECC281F93C78000C7D717 /* NetworkDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */; };
+		E06ECC2A1F93EAE500C7D717 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC291F93EAE500C7D717 /* EmailHelper.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		E06ECC231F93C74C00C7D717 /* NetworkServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocols.swift; sourceTree = "<group>"; };
 		E06ECC251F93C75900C7D717 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDependencies.swift; sourceTree = "<group>"; };
+		E06ECC291F93EAE500C7D717 /* EmailHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		E06ECBD71F93B40F00C7D717 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECC291F93EAE500C7D717 /* EmailHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
 				E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */,
 				E06ECBFF1F93BC9300C7D717 /* TwitterTokenFetcher.swift in Sources */,
+				E06ECC2A1F93EAE500C7D717 /* EmailHelper.swift in Sources */,
 				E06ECC241F93C74C00C7D717 /* NetworkServiceProtocols.swift in Sources */,
 				E06ECC221F93C71500C7D717 /* Loggable.swift in Sources */,
 				E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */,

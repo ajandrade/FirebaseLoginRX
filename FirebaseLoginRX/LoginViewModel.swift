@@ -12,12 +12,19 @@ import Firebase
 
 protocol LoginViewModelType {
   // Input
-
+  var emailText: PublishSubject<String> { get }
+  var passText: PublishSubject<String> { get }
+  
   // Output
+  var loginEnabled: Observable<Bool> { get }
+  var passwordValid: Observable<Bool> { get }
+  var emailValid: Observable<Bool> { get }
+
+  var onLogin: Action<(String, String),Void> { get }
   var onFacebook: Action<Void,AuthCredential> { get }
   var onGoogle: Action<Void,AuthCredential> { get }
   var onTwitter: Action<Void,AuthCredential> { get }
-
+  
 }
 
 struct LoginViewModel: LoginViewModelType {
@@ -28,8 +35,18 @@ struct LoginViewModel: LoginViewModelType {
   
   private let networkDependencies: LoginNetworkDependencies
   
+  // MARK: - INPUT PROPERTIES
+  
+  let emailText = PublishSubject<String>()
+  let passText = PublishSubject<String>()
+  
   // MARK: - OUTPUT PROPERTIES
   
+  private(set) var loginEnabled: Observable<Bool>
+  private(set) var passwordValid: Observable<Bool>
+  private(set) var emailValid: Observable<Bool>
+  
+  private(set) var onLogin: Action<(String, String),Void>
   private(set) var onFacebook: Action<Void,AuthCredential>
   private(set) var onGoogle: Action<Void,AuthCredential>
   private(set) var onTwitter: Action<Void,AuthCredential>
@@ -44,6 +61,39 @@ struct LoginViewModel: LoginViewModelType {
   init(networkDependencies: NetworkDependencies) {
     self.networkDependencies = networkDependencies
     
+    emailValid = emailText
+      .map { EmailHelper.isValidEmail($0) }
+    
+    passwordValid = passText
+      .map { $0.characters.count >= 6 }
+    
+    loginEnabled = Observable
+      .combineLatest(emailValid, passwordValid) { email, pass in
+        return email && pass
+      }.shareReplay(1)
+    
+    onLogin = Action(enabledIf: loginEnabled) { credentials in
+      let emailAuth = EmailAuth(email: credentials.0, password: credentials.1)
+      return networkDependencies.loginService
+        .signIn(withEmail: emailAuth)
+        .catchError { error in
+          let errCode = AuthErrorCode(rawValue: error._code)
+          if errCode == .userNotFound {
+            return networkDependencies.loginService.createAccount(with: emailAuth)
+          }
+          return Observable.error(error)
+        }
+        .flatMap { user -> Observable<Void> in
+          print(user)
+          // TODO: - Update on DB
+          return Observable.empty() // remove this
+        }
+        .flatMap { _ -> Observable<Void> in
+          // TODO: - Do navigation to next screen
+          return Observable.empty()
+      }
+    }
+
     onFacebook = Action {
       return networkDependencies.loginService
         .showSocialView(for: .facebook)

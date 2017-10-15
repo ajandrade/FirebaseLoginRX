@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,25 +21,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2017 Amadeu Andrade. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirebaseLoginRX" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-bd-1cM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-QY-dGW">
+                                <rect key="frame" x="75" y="213.5" width="225" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirebaseLoginRX" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="qtP-Mj-xG1">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                                        <color key="textColor" red="0.17254901959999999" green="0.27058823529999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iLm-h7-cZl">
+                                        <rect key="frame" x="185" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="B2f-u2-cA9"/>
+                                            <constraint firstAttribute="width" constant="40" id="VSh-Rn-ZkD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2017 Amadeu Andrade. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xel-CK-MJr">
+                                <rect key="frame" x="10" y="623.5" width="355" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.27058823529999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
-                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="1" id="moa-c2-u7t"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="x7j-FC-K8j"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="xel-CK-MJr" secondAttribute="bottom" constant="20" id="06e-Xn-9Ny"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="kq1-bd-1cM" secondAttribute="bottom" id="5y3-Vv-7bd"/>
+                            <constraint firstAttribute="trailing" secondItem="kq1-bd-1cM" secondAttribute="trailing" id="6PK-jQ-xW8"/>
+                            <constraint firstAttribute="centerY" secondItem="FTb-QY-dGW" secondAttribute="centerY" constant="100" id="Dpa-jT-g9w"/>
+                            <constraint firstItem="kq1-bd-1cM" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Kvh-sq-GAQ"/>
+                            <constraint firstItem="FTb-QY-dGW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NBY-L4-VLP"/>
+                            <constraint firstAttribute="trailing" secondItem="xel-CK-MJr" secondAttribute="trailing" constant="10" id="gYS-Uz-JU4"/>
+                            <constraint firstItem="kq1-bd-1cM" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="mSq-SS-24b"/>
+                            <constraint firstItem="xel-CK-MJr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="xC2-nL-J9I"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,4 +68,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+        <image name="logo" width="60" height="60"/>
+    </resources>
 </document>

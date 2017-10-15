@@ -17,6 +17,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="FirebaseLoginRX" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="sbi-k5-2cE" id="YxE-xf-nFT"/>
+                <outlet property="facebookButton" destination="6LA-oe-wTJ" id="fOv-Uq-6pE"/>
+                <outlet property="googleButton" destination="RNL-4c-n3S" id="tgC-CJ-3op"/>
+                <outlet property="loginButton" destination="kVm-QE-5CK" id="AWP-do-Lwr"/>
+                <outlet property="passTextField" destination="f9O-gN-6iO" id="SDf-08-E6l"/>
+                <outlet property="twitterButton" destination="cYd-xU-L8q" id="969-pM-Hkb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

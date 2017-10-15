@@ -121,7 +121,6 @@ struct LoginViewModel: LoginViewModelType {
     
     let didFinishGettingAuth = Observable
       .merge(onGoogle.elements, onFacebook.elements, onTwitter.elements)
-      .take(1)
     
     didFinishGettingAuth
       .bind(to: signIn.inputs)

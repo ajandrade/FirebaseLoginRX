@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import Action
+import RxSwift
+
+protocol LoginFinishedNavigation {
+  var performLogout: CocoaAction { get }
+}
 
 final class LoginFinishedCoordinator {
   
@@ -15,6 +21,11 @@ final class LoginFinishedCoordinator {
   fileprivate let navigator: NavigatorRepresentable
   fileprivate let networkServices: NetworkDependencies
   
+  // MARK: - NAVIGATION
+  
+  fileprivate struct Navigation: LoginFinishedNavigation {
+    let performLogout: CocoaAction
+  }
   
   // MARK: - INITIALIZER
   
@@ -29,9 +40,19 @@ extension LoginFinishedCoordinator: Coordinator {
   
   func start() {
     let loginFinishedViewController = LoginFinishedViewController()
-    let loginFinishedViewModel = LoginFinishedViewModel()
+    let navigation = buildNavigationActions()
+    let loginFinishedViewModel = LoginFinishedViewModel(networkDependencies: networkServices, navigation: navigation)
     loginFinishedViewController.viewModel = loginFinishedViewModel
     navigator.transition(to: loginFinishedViewController, type: .push)
+  }
+  
+  private func buildNavigationActions() -> Navigation {
+    let performLogout = CocoaAction {
+      self.navigator.dismiss()
+      return Observable.empty()
+    }
+    
+    return Navigation(performLogout: performLogout)
   }
   
 }

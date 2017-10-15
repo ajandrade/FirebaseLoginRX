@@ -14,10 +14,15 @@ class LoginFinishedViewController: UIViewController {
   
   var viewModel: LoginFinishedViewModelType!
 
+  // MARK: - IBOUTLETS
+  
+  @IBOutlet private weak var logoutButton: UIButton!
+
   // MARK: - VIEW LIFE CYCLE
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    logoutButton.rx.action = viewModel.onLogout
   }
   
 }

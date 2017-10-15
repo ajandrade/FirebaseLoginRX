@@ -45,6 +45,7 @@ class LoginViewController: UIViewController {
     super.viewDidLoad()
     bindKeyboards()
     bindActions()
+    bindViewModel()
   }
   
   // MARK: - BINDINGS
@@ -111,6 +112,48 @@ class LoginViewController: UIViewController {
       .controlEvent(.editingDidEndOnExit)
       .subscribe(onNext: { [weak self] _ in self?.passTextField.resignFirstResponder() })
       .disposed(by: bag)
+  }
+  
+  private func bindViewModel() {
+    emailTextField.rx
+      .text
+      .orEmpty
+      .bind(to: viewModel.emailText)
+      .disposed(by: bag)
+    
+    passTextField.rx
+      .text
+      .orEmpty
+      .bind(to: viewModel.passText)
+      .disposed(by: bag)
+    
+    viewModel.loginEnabled
+      .subscribe(onNext: { [weak self] isEnabled in
+        self?.loginButton.alpha = isEnabled ? 1 : 0.3
+        self?.loginButton.isEnabled = isEnabled
+      })
+      .disposed(by: bag)
+    
+    viewModel.emailValid
+      .subscribe(onNext: { [weak self] isValid in
+        if let text = self?.emailTextField.text, text.isEmpty {
+          self?.emailTextField.bordered(withColor: UIColor.clear)
+        } else {
+          self?.emailTextField.bordered(withColor: isValid ? UIColor.clear : UIColor.red)
+        }
+      })
+      .disposed(by: bag)
+    
+    viewModel.passwordValid
+      .subscribe(onNext: { [weak self] isValid in
+        if let text = self?.passTextField.text, text.isEmpty {
+          self?.passTextField.bordered(withColor: UIColor.clear)
+        } else {
+          self?.passTextField.bordered(withColor: isValid ? UIColor.clear : UIColor.red)
+        }
+      })
+      .disposed(by: bag)
+    
   }
   
 }

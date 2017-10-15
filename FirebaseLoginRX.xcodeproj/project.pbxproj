@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3C6C52BA64B68760666313F3 /* Pods_FirebaseLoginRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEDEE1E2C2DAD8A6959A53 /* Pods_FirebaseLoginRX.framework */; };
 		E06ECBDA1F93B42A00C7D717 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06ECBD91F93B42A00C7D717 /* Launch Screen.storyboard */; };
+		E06ECBDF1F93B4F700C7D717 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBDE1F93B4F700C7D717 /* RootCoordinator.swift */; };
+		E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE01F93B51A00C7D717 /* Coordinator.swift */; };
+		E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE21F93B53000C7D717 /* LoginViewController.swift */; };
+		E06ECBE51F93B53000C7D717 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06ECBE31F93B53000C7D717 /* LoginViewController.xib */; };
+		E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -17,6 +22,11 @@
 		2A47FECF48D8FA4C7CD09AE1 /* Pods-FirebaseLoginRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginRX.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLoginRX/Pods-FirebaseLoginRX.release.xcconfig"; sourceTree = "<group>"; };
 		B1CEDEE1E2C2DAD8A6959A53 /* Pods_FirebaseLoginRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLoginRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06ECBD91F93B42A00C7D717 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E06ECBDE1F93B4F700C7D717 /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		E06ECBE01F93B51A00C7D717 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E06ECBE21F93B53000C7D717 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E06ECBE31F93B53000C7D717 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +74,9 @@
 		E06ECBD41F93B3FA00C7D717 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */,
+				E06ECBDB1F93B4CB00C7D717 /* Root */,
+				E06ECBDC1F93B4D000C7D717 /* Login */,
+				E06ECBDD1F93B4D300C7D717 /* LoginFinished */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -72,6 +84,7 @@
 		E06ECBD51F93B40000C7D717 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECBE01F93B51A00C7D717 /* Coordinator.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -95,6 +108,32 @@
 			children = (
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		E06ECBDB1F93B4CB00C7D717 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */,
+				E06ECBDE1F93B4F700C7D717 /* RootCoordinator.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		E06ECBDC1F93B4D000C7D717 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E06ECBE21F93B53000C7D717 /* LoginViewController.swift */,
+				E06ECBE31F93B53000C7D717 /* LoginViewController.xib */,
+				E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		E06ECBDD1F93B4D300C7D717 /* LoginFinished */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LoginFinished;
 			sourceTree = "<group>";
 		};
 		E0EF6BB71F93AFB1009E9325 = {
@@ -203,6 +242,7 @@
 			files = (
 				E06ECBDA1F93B42A00C7D717 /* Launch Screen.storyboard in Resources */,
 				E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */,
+				E06ECBE51F93B53000C7D717 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +336,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
+				E06ECBDF1F93B4F700C7D717 /* RootCoordinator.swift in Sources */,
+				E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */,
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
+				E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

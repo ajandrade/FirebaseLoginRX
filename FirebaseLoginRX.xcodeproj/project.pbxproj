@@ -26,6 +26,10 @@
 		E06ECBFD1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBFC1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift */; };
 		E06ECBFF1F93BC9300C7D717 /* TwitterTokenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBFE1F93BC9300C7D717 /* TwitterTokenFetcher.swift */; };
 		E06ECC011F93BCA400C7D717 /* TwitterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC001F93BCA400C7D717 /* TwitterAuth.swift */; };
+		E06ECC1C1F93C69600C7D717 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC1B1F93C69600C7D717 /* LoginService.swift */; };
+		E06ECC1E1F93C6AC00C7D717 /* EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */; };
+		E06ECC201F93C6F300C7D717 /* FirebaseCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */; };
+		E06ECC221F93C71500C7D717 /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC211F93C71500C7D717 /* Loggable.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -51,6 +55,10 @@
 		E06ECBFC1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GoogleSignIn+Rx.swift"; sourceTree = "<group>"; };
 		E06ECBFE1F93BC9300C7D717 /* TwitterTokenFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTokenFetcher.swift; sourceTree = "<group>"; };
 		E06ECC001F93BCA400C7D717 /* TwitterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuth.swift; sourceTree = "<group>"; };
+		E06ECC1B1F93C69600C7D717 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAuth.swift; sourceTree = "<group>"; };
+		E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseCRUD.swift; sourceTree = "<group>"; };
+		E06ECC211F93C71500C7D717 /* Loggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 				E06ECBF51F93BC2500C7D717 /* FacebookAuth.swift */,
 				E06ECBF91F93BC5700C7D717 /* GoogleAuth.swift */,
 				E06ECC001F93BCA400C7D717 /* TwitterAuth.swift */,
+				E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -114,6 +123,8 @@
 			children = (
 				E06ECBEE1F93B77900C7D717 /* UI */,
 				E06ECBE01F93B51A00C7D717 /* Coordinator.swift */,
+				E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */,
+				E06ECC211F93C71500C7D717 /* Loggable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 				E06ECBF31F93BC0F00C7D717 /* FacebookTokenFetcher.swift */,
 				E06ECBF71F93BC4600C7D717 /* GoogleTokenFetcher.swift */,
 				E06ECBFE1F93BC9300C7D717 /* TwitterTokenFetcher.swift */,
+				E06ECC1B1F93C69600C7D717 /* LoginService.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -391,6 +403,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06ECC1C1F93C69600C7D717 /* LoginService.swift in Sources */,
+				E06ECC201F93C6F300C7D717 /* FirebaseCRUD.swift in Sources */,
 				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
 				E06ECC011F93BCA400C7D717 /* TwitterAuth.swift in Sources */,
 				E06ECBF41F93BC0F00C7D717 /* FacebookTokenFetcher.swift in Sources */,
@@ -402,10 +416,12 @@
 				E06ECBE91F93B6DF00C7D717 /* LoginViewModel.swift in Sources */,
 				E06ECBED1F93B77100C7D717 /* Bordable.swift in Sources */,
 				E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */,
+				E06ECC1E1F93C6AC00C7D717 /* EmailAuth.swift in Sources */,
 				E06ECBFA1F93BC5700C7D717 /* GoogleAuth.swift in Sources */,
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
 				E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */,
 				E06ECBFF1F93BC9300C7D717 /* TwitterTokenFetcher.swift in Sources */,
+				E06ECC221F93C71500C7D717 /* Loggable.swift in Sources */,
 				E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

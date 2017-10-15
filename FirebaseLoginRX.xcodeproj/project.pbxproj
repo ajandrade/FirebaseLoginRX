@@ -38,6 +38,10 @@
 		E06ECC2E1F93ED9700C7D717 /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC2D1F93ED9700C7D717 /* Registrable.swift */; };
 		E06ECC301F93EDB000C7D717 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC2F1F93EDB000C7D717 /* User.swift */; };
 		E06ECC321F93EE8C00C7D717 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC311F93EE8C00C7D717 /* Alertable.swift */; };
+		E06ECC351F93EF5000C7D717 /* LoginFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC331F93EF5000C7D717 /* LoginFinishedViewController.swift */; };
+		E06ECC361F93EF5000C7D717 /* LoginFinishedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06ECC341F93EF5000C7D717 /* LoginFinishedViewController.xib */; };
+		E06ECC381F93F05A00C7D717 /* LoginFinishedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC371F93F05A00C7D717 /* LoginFinishedCoordinator.swift */; };
+		E06ECC3A1F93F06300C7D717 /* LoginFinishedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC391F93F06300C7D717 /* LoginFinishedViewModel.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -75,6 +79,10 @@
 		E06ECC2D1F93ED9700C7D717 /* Registrable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
 		E06ECC2F1F93EDB000C7D717 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E06ECC311F93EE8C00C7D717 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		E06ECC331F93EF5000C7D717 /* LoginFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFinishedViewController.swift; sourceTree = "<group>"; };
+		E06ECC341F93EF5000C7D717 /* LoginFinishedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFinishedViewController.xib; sourceTree = "<group>"; };
+		E06ECC371F93F05A00C7D717 /* LoginFinishedCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFinishedCoordinator.swift; sourceTree = "<group>"; };
+		E06ECC391F93F06300C7D717 /* LoginFinishedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFinishedViewModel.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -203,6 +211,10 @@
 		E06ECBDD1F93B4D300C7D717 /* LoginFinished */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECC331F93EF5000C7D717 /* LoginFinishedViewController.swift */,
+				E06ECC341F93EF5000C7D717 /* LoginFinishedViewController.xib */,
+				E06ECC371F93F05A00C7D717 /* LoginFinishedCoordinator.swift */,
+				E06ECC391F93F06300C7D717 /* LoginFinishedViewModel.swift */,
 			);
 			name = LoginFinished;
 			sourceTree = "<group>";
@@ -328,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06ECC361F93EF5000C7D717 /* LoginFinishedViewController.xib in Resources */,
 				E06ECBDA1F93B42A00C7D717 /* Launch Screen.storyboard in Resources */,
 				E06ECBF21F93B9B100C7D717 /* GoogleService-Info.plist in Resources */,
 				E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */,
@@ -431,6 +444,7 @@
 				E06ECC201F93C6F300C7D717 /* FirebaseCRUD.swift in Sources */,
 				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
 				E06ECC011F93BCA400C7D717 /* TwitterAuth.swift in Sources */,
+				E06ECC351F93EF5000C7D717 /* LoginFinishedViewController.swift in Sources */,
 				E06ECC281F93C78000C7D717 /* NetworkDependencies.swift in Sources */,
 				E06ECC301F93EDB000C7D717 /* User.swift in Sources */,
 				E06ECBF41F93BC0F00C7D717 /* FacebookTokenFetcher.swift in Sources */,
@@ -448,6 +462,8 @@
 				E06ECBFA1F93BC5700C7D717 /* GoogleAuth.swift in Sources */,
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
 				E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */,
+				E06ECC3A1F93F06300C7D717 /* LoginFinishedViewModel.swift in Sources */,
+				E06ECC381F93F05A00C7D717 /* LoginFinishedCoordinator.swift in Sources */,
 				E06ECC2E1F93ED9700C7D717 /* Registrable.swift in Sources */,
 				E06ECC321F93EE8C00C7D717 /* Alertable.swift in Sources */,
 				E06ECBFF1F93BC9300C7D717 /* TwitterTokenFetcher.swift in Sources */,

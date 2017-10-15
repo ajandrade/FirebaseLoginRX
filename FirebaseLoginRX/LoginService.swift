@@ -126,3 +126,26 @@ extension LoginService: Loggable {
   }
   
 }
+
+extension LoginService: Registrable {
+  
+  /** Database user's reference. */
+  private var usersReference: DatabaseReference {
+    return rootReference.child("Users")
+  }
+  
+  func updateDB(with user: User) -> Observable<Void> {
+    let userKey = user.uid
+    let userReference = usersReference.child(userKey)
+    let userInfo = user.toDictionary()
+    return get(objectWithKey: userKey, from: userReference)
+      .flatMap { snapshot -> Observable<Void> in
+        if snapshot.value is NSNull {
+          return self.insert(data: userInfo, at: userReference)
+        } else {
+          return self.update(data: userInfo, on: userReference)
+        }
+    }
+  }
+  
+}

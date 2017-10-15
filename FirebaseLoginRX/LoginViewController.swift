@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    bindKeyboards()
     bindActions()
   }
   
@@ -65,6 +66,34 @@ class LoginViewController: UIViewController {
       .subscribe(onNext: { [weak self] _ in self?.viewModel.onTwitter.execute() })
       .disposed(by: bag)
 
+  }
+  
+  private func bindKeyboards() {
+    
+    let tapGesture = UITapGestureRecognizer()
+    tapGesture.rx
+      .event
+      .subscribe(onNext: { [weak self] _ in self?.view.endEditing(true) })
+      .disposed(by: bag)
+    self.view.addGestureRecognizer(tapGesture)
+    
+    emailTextField.rx
+      .controlEvent(.editingDidEndOnExit)
+      .subscribe(onNext: { [weak self] _ in
+        self?.emailTextField.resignFirstResponder()
+        self?.passTextField.becomeFirstResponder()
+      })
+      .disposed(by: bag)
+    
+    loginButton.rx
+      .tap
+      .subscribe(onNext: { [weak self] _ in self?.passTextField.resignFirstResponder() })
+      .disposed(by: bag)
+    
+    passTextField.rx
+      .controlEvent(.editingDidEndOnExit)
+      .subscribe(onNext: { [weak self] _ in self?.passTextField.resignFirstResponder() })
+      .disposed(by: bag)
   }
   
 }

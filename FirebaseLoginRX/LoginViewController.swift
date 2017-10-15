@@ -60,6 +60,11 @@ class LoginViewController: UIViewController {
       .subscribe(onNext: { [weak self] _ in self?.viewModel.onGoogle.execute() })
       .disposed(by: bag)
 
+    twitterButton.rx
+      .tap
+      .subscribe(onNext: { [weak self] _ in self?.viewModel.onTwitter.execute() })
+      .disposed(by: bag)
+
   }
   
 }

@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
   // MARK: - BINDINGS
   
   private func bindActions() {
-  
+    
     facebookButton.rx
       .tap
       .subscribe(onNext: { [weak self] _ in self?.viewModel.onFacebook.execute() })
@@ -60,12 +60,29 @@ class LoginViewController: UIViewController {
       .tap
       .subscribe(onNext: { [weak self] _ in self?.viewModel.onGoogle.execute() })
       .disposed(by: bag)
-
+    
     twitterButton.rx
       .tap
       .subscribe(onNext: { [weak self] _ in self?.viewModel.onTwitter.execute() })
       .disposed(by: bag)
-
+    
+    let loginAction = viewModel.onLogin
+    
+    let textInputs = Observable.combineLatest(emailTextField.rx.text.orEmpty, passTextField.rx.text.orEmpty) { email, pass in
+      return (email, pass)
+    }
+    
+    loginButton.rx
+      .tap
+      .withLatestFrom(textInputs)
+      .bind(to: loginAction.inputs)
+      .disposed(by: bag)
+    
+    passTextField.rx
+      .controlEvent(.editingDidEndOnExit)
+      .withLatestFrom(textInputs)
+      .bind(to: loginAction.inputs)
+      .disposed(by: bag)
   }
   
   private func bindKeyboards() {

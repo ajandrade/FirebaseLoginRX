@@ -13,7 +13,7 @@ import Action
 import GoogleSignIn
 
 extension LoginViewController: GIDSignInUIDelegate { }
-extension LoginViewController: CustomSpinnerViewable { }
+extension LoginViewController: CustomSpinnerViewable, Alertable { }
 
 class LoginViewController: UIViewController {
   
@@ -167,10 +167,7 @@ class LoginViewController: UIViewController {
     viewModel.didFinishLoginWithError
       .subscribe(onNext: { [weak self] errorDescription in
         self?.stopAnimatingCustomSpinner()
-        let alert = UIAlertController(title: "Error", message: errorDescription, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        alert.addAction(action)
-        self?.present(alert, animated: true, completion: nil)
+        self?.showErrorAlert(with: errorDescription)
       })
       .disposed(by: bag)
 

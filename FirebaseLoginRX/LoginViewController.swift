@@ -13,6 +13,7 @@ import Action
 import GoogleSignIn
 
 extension LoginViewController: GIDSignInUIDelegate { }
+extension LoginViewController: CustomSpinnerViewable { }
 
 class LoginViewController: UIViewController {
   
@@ -46,6 +47,11 @@ class LoginViewController: UIViewController {
     bindKeyboards()
     bindActions()
     bindViewModel()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    stopAnimatingCustomSpinner()
   }
   
   // MARK: - BINDINGS
@@ -154,6 +160,20 @@ class LoginViewController: UIViewController {
       })
       .disposed(by: bag)
     
+    viewModel.isLoggingIn
+      .subscribe(onNext: { [weak self] _ in self?.startAnimatingLoginSpinner() })
+      .disposed(by: bag)
+    
+    viewModel.didFinishLoginWithError
+      .subscribe(onNext: { [weak self] errorDescription in
+        self?.stopAnimatingCustomSpinner()
+        let alert = UIAlertController(title: "Error", message: errorDescription, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self?.present(alert, animated: true, completion: nil)
+      })
+      .disposed(by: bag)
+
   }
   
 }

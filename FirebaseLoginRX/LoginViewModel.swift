@@ -19,12 +19,13 @@ protocol LoginViewModelType {
   var loginEnabled: Observable<Bool> { get }
   var passwordValid: Observable<Bool> { get }
   var emailValid: Observable<Bool> { get }
-
+  var isLoggingIn: Observable<Bool> { get }
+  var didFinishLoginWithError: Observable<String> { get }
+  
   var onLogin: Action<(String, String),Void> { get }
   var onFacebook: Action<Void,AuthCredential> { get }
   var onGoogle: Action<Void,AuthCredential> { get }
   var onTwitter: Action<Void,AuthCredential> { get }
-  
 }
 
 struct LoginViewModel: LoginViewModelType {
@@ -45,6 +46,8 @@ struct LoginViewModel: LoginViewModelType {
   private(set) var loginEnabled: Observable<Bool>
   private(set) var passwordValid: Observable<Bool>
   private(set) var emailValid: Observable<Bool>
+  private(set) var isLoggingIn: Observable<Bool>
+  private(set) var didFinishLoginWithError: Observable<String>
   
   private(set) var onLogin: Action<(String, String),Void>
   private(set) var onFacebook: Action<Void,AuthCredential>
@@ -130,6 +133,20 @@ struct LoginViewModel: LoginViewModelType {
       .bind(to: signIn.inputs)
       .disposed(by: bag)
 
+    let didFinishShowingSocialView = didFinishGettingAuth.map { _ in return true }
+    
+    isLoggingIn = Observable
+      .merge([didFinishShowingSocialView, onLogin.executing])
+      .filter { $0 }
+    
+    didFinishLoginWithError = Observable
+      .merge([onLogin.errors, onFacebook.errors, onGoogle.errors, onTwitter.errors])
+      .map { error in
+        if case .underlyingError(let err) = error {
+          return err.localizedDescription
+        }
+        return "Unknown Error"
+    }
   }
   
 }

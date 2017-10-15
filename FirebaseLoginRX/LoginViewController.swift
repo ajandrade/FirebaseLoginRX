@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
   
   // MARK: - DEPENDENCIES
   
+  var viewModel: LoginViewModelType!
   
   // MARK: - PROPERTIES
   

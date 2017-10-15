@@ -14,6 +14,7 @@
 		E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE21F93B53000C7D717 /* LoginViewController.swift */; };
 		E06ECBE51F93B53000C7D717 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06ECBE31F93B53000C7D717 /* LoginViewController.xib */; };
 		E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */; };
+		E06ECBE91F93B6DF00C7D717 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBE81F93B6DF00C7D717 /* LoginViewModel.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		E06ECBE21F93B53000C7D717 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E06ECBE31F93B53000C7D717 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		E06ECBE81F93B6DF00C7D717 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				E06ECBE21F93B53000C7D717 /* LoginViewController.swift */,
 				E06ECBE31F93B53000C7D717 /* LoginViewController.xib */,
 				E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */,
+				E06ECBE81F93B6DF00C7D717 /* LoginViewModel.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			files = (
 				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
 				E06ECBDF1F93B4F700C7D717 /* RootCoordinator.swift in Sources */,
+				E06ECBE91F93B6DF00C7D717 /* LoginViewModel.swift in Sources */,
 				E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */,
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
 				E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */,

@@ -26,6 +26,8 @@ extension LoginCoordinator: Coordinator {
   
   func start() {
     let loginViewController = LoginViewController()
+    let loginViewModel = LoginViewModel()
+    loginViewController.viewModel = loginViewModel
     navigationController.viewControllers = [loginViewController]
   }
   

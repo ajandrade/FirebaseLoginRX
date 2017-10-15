@@ -21,6 +21,9 @@
 		E06ECBF21F93B9B100C7D717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E06ECBF11F93B9B100C7D717 /* GoogleService-Info.plist */; };
 		E06ECBF41F93BC0F00C7D717 /* FacebookTokenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBF31F93BC0F00C7D717 /* FacebookTokenFetcher.swift */; };
 		E06ECBF61F93BC2500C7D717 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBF51F93BC2500C7D717 /* FacebookAuth.swift */; };
+		E06ECBF81F93BC4600C7D717 /* GoogleTokenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBF71F93BC4600C7D717 /* GoogleTokenFetcher.swift */; };
+		E06ECBFA1F93BC5700C7D717 /* GoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBF91F93BC5700C7D717 /* GoogleAuth.swift */; };
+		E06ECBFD1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECBFC1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -41,6 +44,9 @@
 		E06ECBF11F93B9B100C7D717 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E06ECBF31F93BC0F00C7D717 /* FacebookTokenFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookTokenFetcher.swift; sourceTree = "<group>"; };
 		E06ECBF51F93BC2500C7D717 /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
+		E06ECBF71F93BC4600C7D717 /* GoogleTokenFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTokenFetcher.swift; sourceTree = "<group>"; };
+		E06ECBF91F93BC5700C7D717 /* GoogleAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
+		E06ECBFC1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GoogleSignIn+Rx.swift"; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				E06ECBF51F93BC2500C7D717 /* FacebookAuth.swift */,
+				E06ECBF91F93BC5700C7D717 /* GoogleAuth.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -109,6 +116,7 @@
 		E06ECBD61F93B40800C7D717 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECBFB1F93BC6500C7D717 /* Rx */,
 				E06ECBEF1F93B79300C7D717 /* UIView.swift */,
 			);
 			name = Extensions;
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				E06ECBF31F93BC0F00C7D717 /* FacebookTokenFetcher.swift */,
+				E06ECBF71F93BC4600C7D717 /* GoogleTokenFetcher.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -163,6 +172,14 @@
 				E06ECBEC1F93B77100C7D717 /* Bordable.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		E06ECBFB1F93BC6500C7D717 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				E06ECBFC1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift */,
+			);
+			name = Rx;
 			sourceTree = "<group>";
 		};
 		E0EF6BB71F93AFB1009E9325 = {
@@ -368,12 +385,15 @@
 			files = (
 				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
 				E06ECBF41F93BC0F00C7D717 /* FacebookTokenFetcher.swift in Sources */,
+				E06ECBFD1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift in Sources */,
+				E06ECBF81F93BC4600C7D717 /* GoogleTokenFetcher.swift in Sources */,
 				E06ECBDF1F93B4F700C7D717 /* RootCoordinator.swift in Sources */,
 				E06ECBF61F93BC2500C7D717 /* FacebookAuth.swift in Sources */,
 				E06ECBEB1F93B75C00C7D717 /* Roundable.swift in Sources */,
 				E06ECBE91F93B6DF00C7D717 /* LoginViewModel.swift in Sources */,
 				E06ECBED1F93B77100C7D717 /* Bordable.swift in Sources */,
 				E06ECBE71F93B53F00C7D717 /* LoginCoordinator.swift in Sources */,
+				E06ECBFA1F93BC5700C7D717 /* GoogleAuth.swift in Sources */,
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
 				E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */,
 				E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */,

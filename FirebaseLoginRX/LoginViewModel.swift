@@ -87,9 +87,7 @@ struct LoginViewModel: LoginViewModelType {
           return Observable.error(error)
         }
         .flatMap { user -> Observable<Void> in
-          print(user)
-          // TODO: - Update on DB
-          return Observable.empty() // remove this
+          networkDependencies.loginService.updateDB(with: user)
         }
         .flatMap { _ -> Observable<Void> in
           // TODO: - Do navigation to next screen
@@ -115,9 +113,7 @@ struct LoginViewModel: LoginViewModelType {
     signIn = Action { credential in
       return networkDependencies.loginService.signIn(withCredential: credential)
         .flatMap { user -> Observable<Void> in
-          print(user)
-          // TODO: - Update on DB
-          return Observable.empty() // remove this
+          networkDependencies.loginService.updateDB(with: user)
         }
         .flatMap { _ -> Observable<Void> in
           // TODO: - Do navigation to next screen

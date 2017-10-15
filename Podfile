@@ -8,20 +8,21 @@ target 'FirebaseLoginRX' do
   # Pods for FirebaseLoginRX
 
   # FRP
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'Action'
+  pod 'RxSwift', '3.5.0'
+  pod 'RxCocoa', '3.5.0'
+  pod 'Action', '3.1.1'
 
   # Firebase
-  pod 'Firebase/Auth'
+  pod 'Firebase/Auth', '4.2'
+  pod 'Firebase/Database', '4.2'
 
   # Social Login
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
-  pod 'GoogleSignIn'
-  pod 'TwitterKit'
+  pod 'FacebookCore', '0.2.0'
+  pod 'FacebookLogin', '0.2.0'
+  pod 'GoogleSignIn', '4.0.2'
+  pod 'TwitterKit', '3.0.3'
 
   # UI
-  pod 'NVActivityIndicatorView'
+  pod 'NVActivityIndicatorView', '3.6.1'
 
 end

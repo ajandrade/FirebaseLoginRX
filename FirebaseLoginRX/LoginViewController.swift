@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import Action
 
 class LoginViewController: UIViewController {
   
@@ -16,6 +19,7 @@ class LoginViewController: UIViewController {
   
   // MARK: - PROPERTIES
   
+  private let bag = DisposeBag()
   
   // MARK: - IBOUTLETS
   
@@ -34,6 +38,18 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    bindActions()
+  }
+  
+  // MARK: - BINDINGS
+  
+  private func bindActions() {
+  
+    facebookButton.rx
+      .tap
+      .subscribe(onNext: { [weak self] _ in self?.viewModel.onFacebook.execute() })
+      .disposed(by: bag)
+    
   }
   
 }

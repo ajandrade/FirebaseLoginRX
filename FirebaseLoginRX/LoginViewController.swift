@@ -10,6 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Action
+import GoogleSignIn
+
+extension LoginViewController: GIDSignInUIDelegate { }
 
 class LoginViewController: UIViewController {
   
@@ -31,7 +34,9 @@ class LoginViewController: UIViewController {
   }
   @IBOutlet private weak var loginButton: UIButton!
   @IBOutlet private weak var facebookButton: UIButton!
-  @IBOutlet private weak var googleButton: UIButton!
+  @IBOutlet private weak var googleButton: UIButton! {
+    didSet { GIDSignIn.sharedInstance().uiDelegate = self }
+  }
   @IBOutlet private weak var twitterButton: UIButton!
   
   // MARK: - VIEW LIFE CYCLE
@@ -50,6 +55,11 @@ class LoginViewController: UIViewController {
       .subscribe(onNext: { [weak self] _ in self?.viewModel.onFacebook.execute() })
       .disposed(by: bag)
     
+    googleButton.rx
+      .tap
+      .subscribe(onNext: { [weak self] _ in self?.viewModel.onGoogle.execute() })
+      .disposed(by: bag)
+
   }
   
 }

@@ -15,6 +15,8 @@ protocol LoginViewModelType {
 
   // Output
   var onFacebook: Action<Void,AuthCredential> { get }
+  var onGoogle: Action<Void,AuthCredential> { get }
+
 }
 
 struct LoginViewModel: LoginViewModelType {
@@ -28,6 +30,7 @@ struct LoginViewModel: LoginViewModelType {
   // MARK: - OUTPUT PROPERTIES
   
   private(set) var onFacebook: Action<Void,AuthCredential>
+  private(set) var onGoogle: Action<Void,AuthCredential>
 
   // MARK: - INITIALIZER
 
@@ -38,6 +41,12 @@ struct LoginViewModel: LoginViewModelType {
       return networkDependencies.loginService
         .showSocialView(for: .facebook)
     }
+    
+    onGoogle = Action {
+      return networkDependencies.loginService
+        .showSocialView(for: .google)
+    }
+
     
   }
   

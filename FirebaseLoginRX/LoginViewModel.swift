@@ -34,6 +34,11 @@ struct LoginViewModel: LoginViewModelType {
   private(set) var onGoogle: Action<Void,AuthCredential>
   private(set) var onTwitter: Action<Void,AuthCredential>
 
+  // MARK: - INTERNAL PROPERTIES
+  
+  private let signIn: Action<AuthCredential, Void>
+  private let bag = DisposeBag()
+
   // MARK: - INITIALIZER
 
   init(networkDependencies: NetworkDependencies) {
@@ -54,6 +59,27 @@ struct LoginViewModel: LoginViewModelType {
         .showSocialView(for: .twitter)
     }
     
+    signIn = Action { credential in
+      return networkDependencies.loginService.signIn(withCredential: credential)
+        .flatMap { user -> Observable<Void> in
+          print(user)
+          // TODO: - Update on DB
+          return Observable.empty() // remove this
+        }
+        .flatMap { _ -> Observable<Void> in
+          // TODO: - Do navigation to next screen
+          return Observable.empty()
+      }
+    }
+    
+    let didFinishGettingAuth = Observable
+      .merge(onGoogle.elements, onFacebook.elements, onTwitter.elements)
+      .take(1)
+    
+    didFinishGettingAuth
+      .bind(to: signIn.inputs)
+      .disposed(by: bag)
+
   }
   
 }

@@ -42,6 +42,8 @@
 		E06ECC361F93EF5000C7D717 /* LoginFinishedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06ECC341F93EF5000C7D717 /* LoginFinishedViewController.xib */; };
 		E06ECC381F93F05A00C7D717 /* LoginFinishedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC371F93F05A00C7D717 /* LoginFinishedCoordinator.swift */; };
 		E06ECC3A1F93F06300C7D717 /* LoginFinishedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC391F93F06300C7D717 /* LoginFinishedViewModel.swift */; };
+		E06ECC3D1F93F16D00C7D717 /* NavigationTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC3C1F93F16D00C7D717 /* NavigationTransitionType.swift */; };
+		E06ECC3F1F93F18400C7D717 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC3E1F93F18400C7D717 /* Navigator.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,8 @@
 		E06ECC341F93EF5000C7D717 /* LoginFinishedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFinishedViewController.xib; sourceTree = "<group>"; };
 		E06ECC371F93F05A00C7D717 /* LoginFinishedCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFinishedCoordinator.swift; sourceTree = "<group>"; };
 		E06ECC391F93F06300C7D717 /* LoginFinishedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFinishedViewModel.swift; sourceTree = "<group>"; };
+		E06ECC3C1F93F16D00C7D717 /* NavigationTransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTransitionType.swift; sourceTree = "<group>"; };
+		E06ECC3E1F93F18400C7D717 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 			name = Rx;
 			sourceTree = "<group>";
 		};
+		E06ECC3B1F93F16200C7D717 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E06ECC3C1F93F16D00C7D717 /* NavigationTransitionType.swift */,
+				E06ECC3E1F93F18400C7D717 /* Navigator.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
 		E0EF6BB71F93AFB1009E9325 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +270,7 @@
 		E0EF6BC21F93AFB1009E9325 /* FirebaseLoginRX */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECC3B1F93F16200C7D717 /* Navigation */,
 				E06ECBD81F93B41500C7D717 /* Network */,
 				E06ECBD71F93B40F00C7D717 /* Helpers */,
 				E06ECBD61F93B40800C7D717 /* Extensions */,
@@ -445,6 +459,7 @@
 				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
 				E06ECC011F93BCA400C7D717 /* TwitterAuth.swift in Sources */,
 				E06ECC351F93EF5000C7D717 /* LoginFinishedViewController.swift in Sources */,
+				E06ECC3F1F93F18400C7D717 /* Navigator.swift in Sources */,
 				E06ECC281F93C78000C7D717 /* NetworkDependencies.swift in Sources */,
 				E06ECC301F93EDB000C7D717 /* User.swift in Sources */,
 				E06ECBF41F93BC0F00C7D717 /* FacebookTokenFetcher.swift in Sources */,
@@ -462,6 +477,7 @@
 				E06ECBFA1F93BC5700C7D717 /* GoogleAuth.swift in Sources */,
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
 				E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */,
+				E06ECC3D1F93F16D00C7D717 /* NavigationTransitionType.swift in Sources */,
 				E06ECC3A1F93F06300C7D717 /* LoginFinishedViewModel.swift in Sources */,
 				E06ECC381F93F05A00C7D717 /* LoginFinishedCoordinator.swift in Sources */,
 				E06ECC2E1F93ED9700C7D717 /* Registrable.swift in Sources */,

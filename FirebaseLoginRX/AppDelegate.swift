@@ -29,7 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Twitter.sharedInstance().start(withConsumerKey:"7RFDU0nx0aNFJN0IAGNZVv8j3", consumerSecret:"2LfZCAl8lEgIk0xihgnf9PJuDuHY8OKOHTWP9V938deA8TOf6o")
 
     window = UIWindow(frame: UIScreen.main.bounds)
-    let rootCoordinator = RootCoordinator(window: window!)
+
+    let navigator = Navigator()
+
+    let rootCoordinator = RootCoordinator(window: window!, navigator: navigator)
     rootCoordinator.start()
     
     return true

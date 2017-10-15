@@ -13,22 +13,18 @@ final class RootCoordinator {
   // MARK: - DEPENDENCIES
   
   private let window: UIWindow
+  fileprivate let navigator: NavigatorRepresentable
   
   // MARK: - PROPERTIES
-  
-  fileprivate let navigationController: UINavigationController = {
-    let navController = UINavigationController()
-    navController.setNavigationBarHidden(true, animated: false)
-    return navController
-  }()
   
   fileprivate let networkServices = NetworkDependencies()
   
   // MARK: - INITIALIZER
   
-  init(window: UIWindow) {
+  init(window: UIWindow, navigator: NavigatorRepresentable) {
     self.window = window
-    self.window.rootViewController = navigationController
+    self.navigator = navigator
+    self.window.rootViewController = navigator.root()
     self.window.makeKeyAndVisible()
   }
   
@@ -37,7 +33,7 @@ final class RootCoordinator {
 extension RootCoordinator: Coordinator {
   
   func start() {
-    let loginCoordinator = LoginCoordinator(navigationController: navigationController, networkServices: networkServices)
+    let loginCoordinator = LoginCoordinator(navigator: navigator, networkServices: networkServices)
     loginCoordinator.start()
   }
   

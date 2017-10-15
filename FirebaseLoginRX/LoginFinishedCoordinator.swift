@@ -12,14 +12,14 @@ final class LoginFinishedCoordinator {
   
   // MARK: - PROPERTIES
   
-  fileprivate let navigationController: UINavigationController
+  fileprivate let navigator: NavigatorRepresentable
   fileprivate let networkServices: NetworkDependencies
   
   
   // MARK: - INITIALIZER
   
-  init(navigationController: UINavigationController, networkServices: NetworkDependencies) {
-    self.navigationController = navigationController
+  init(navigator: NavigatorRepresentable, networkServices: NetworkDependencies) {
+    self.navigator = navigator
     self.networkServices = networkServices
   }
   
@@ -31,7 +31,7 @@ extension LoginFinishedCoordinator: Coordinator {
     let loginFinishedViewController = LoginFinishedViewController()
     let loginFinishedViewModel = LoginFinishedViewModel()
     loginFinishedViewController.viewModel = loginFinishedViewModel
-    navigationController.viewControllers = [loginFinishedViewController]
+    navigator.transition(to: loginFinishedViewController, type: .push)
   }
   
 }

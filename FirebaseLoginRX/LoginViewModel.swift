@@ -61,7 +61,7 @@ struct LoginViewModel: LoginViewModelType {
 
   // MARK: - INITIALIZER
 
-  init(networkDependencies: NetworkDependencies) {
+  init(networkDependencies: NetworkDependencies, navigation: LoginNavigation) {
     self.networkDependencies = networkDependencies
     
     emailValid = emailText
@@ -90,8 +90,7 @@ struct LoginViewModel: LoginViewModelType {
           networkDependencies.loginService.updateDB(with: user)
         }
         .flatMap { _ -> Observable<Void> in
-          // TODO: - Do navigation to next screen
-          return Observable.empty()
+          return navigation.performLogin.execute()
       }
     }
 
@@ -116,8 +115,7 @@ struct LoginViewModel: LoginViewModelType {
           networkDependencies.loginService.updateDB(with: user)
         }
         .flatMap { _ -> Observable<Void> in
-          // TODO: - Do navigation to next screen
-          return Observable.empty()
+          return navigation.performLogin.execute()
       }
     }
     

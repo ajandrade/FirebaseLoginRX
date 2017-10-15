@@ -7,18 +7,30 @@
 //
 
 import UIKit
+import RxSwift
+import Action
+
+protocol LoginNavigation {
+  var performLogin: CocoaAction { get }
+}
 
 final class LoginCoordinator {
   
   // MARK: - DEPENDENCIES
   
-  fileprivate let navigationController: UINavigationController
+  fileprivate let navigator: NavigatorRepresentable
   fileprivate let networkServices: NetworkDependencies
   
-  // MARK: - INITIALIZER
+  // MARK: - NAVIGATION
   
-  init(navigationController: UINavigationController, networkServices: NetworkDependencies) {
-    self.navigationController = navigationController
+  fileprivate struct Navigation: LoginNavigation {
+    let performLogin: CocoaAction
+  }
+  
+  // MARK: - INITIALIZER
+
+  init(navigator: NavigatorRepresentable, networkServices: NetworkDependencies) {
+    self.navigator = navigator
     self.networkServices = networkServices
   }
   
@@ -28,9 +40,21 @@ extension LoginCoordinator: Coordinator {
   
   func start() {
     let loginViewController = LoginViewController()
-    let loginViewModel = LoginViewModel(networkDependencies: networkServices)
+    let navigation = buildNavigationActions()
+    let loginViewModel = LoginViewModel(networkDependencies: networkServices, navigation: navigation)
     loginViewController.viewModel = loginViewModel
-    navigationController.viewControllers = [loginViewController]
+    navigator.transition(to: loginViewController, type: .root)
   }
+  
+  private func buildNavigationActions() -> Navigation {
+    let performLogin = CocoaAction {
+      let loginFinishedCoordinator = LoginFinishedCoordinator(navigator: self.navigator, networkServices: self.networkServices)
+      loginFinishedCoordinator.start()
+      return Observable.empty()
+    }
+    
+    return Navigation(performLogin: performLogin)
+  }
+
   
 }

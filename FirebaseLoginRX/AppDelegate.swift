@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FacebookCore
 import GoogleSignIn
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     // Google
     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+    // Twitter
+    Twitter.sharedInstance().start(withConsumerKey:"7RFDU0nx0aNFJN0IAGNZVv8j3", consumerSecret:"2LfZCAl8lEgIk0xihgnf9PJuDuHY8OKOHTWP9V938deA8TOf6o")
 
     window = UIWindow(frame: UIScreen.main.bounds)
     let rootCoordinator = RootCoordinator(window: window!)
@@ -41,9 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       let google = GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation)
       
-      return facebook || google
+      let twitter = Twitter.sharedInstance().application(application, open: url, options: options)
+      
+      return facebook || google || twitter
   }
-
 
 }
 

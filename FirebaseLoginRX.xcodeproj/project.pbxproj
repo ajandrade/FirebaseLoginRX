@@ -30,6 +30,9 @@
 		E06ECC1E1F93C6AC00C7D717 /* EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */; };
 		E06ECC201F93C6F300C7D717 /* FirebaseCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */; };
 		E06ECC221F93C71500C7D717 /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC211F93C71500C7D717 /* Loggable.swift */; };
+		E06ECC241F93C74C00C7D717 /* NetworkServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC231F93C74C00C7D717 /* NetworkServiceProtocols.swift */; };
+		E06ECC261F93C75900C7D717 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC251F93C75900C7D717 /* UserService.swift */; };
+		E06ECC281F93C78000C7D717 /* NetworkDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */; };
 		E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */; };
 		E0EF6BCB1F93AFB1009E9325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -59,6 +62,9 @@
 		E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAuth.swift; sourceTree = "<group>"; };
 		E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseCRUD.swift; sourceTree = "<group>"; };
 		E06ECC211F93C71500C7D717 /* Loggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
+		E06ECC231F93C74C00C7D717 /* NetworkServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocols.swift; sourceTree = "<group>"; };
+		E06ECC251F93C75900C7D717 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDependencies.swift; sourceTree = "<group>"; };
 		E0EF6BC01F93AFB1009E9325 /* FirebaseLoginRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EF6BC31F93AFB1009E9325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 				E06ECBF91F93BC5700C7D717 /* GoogleAuth.swift */,
 				E06ECC001F93BCA400C7D717 /* TwitterAuth.swift */,
 				E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */,
+				E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 				E06ECBE01F93B51A00C7D717 /* Coordinator.swift */,
 				E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */,
 				E06ECC211F93C71500C7D717 /* Loggable.swift */,
+				E06ECC231F93C74C00C7D717 /* NetworkServiceProtocols.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 				E06ECBF71F93BC4600C7D717 /* GoogleTokenFetcher.swift */,
 				E06ECBFE1F93BC9300C7D717 /* TwitterTokenFetcher.swift */,
 				E06ECC1B1F93C69600C7D717 /* LoginService.swift */,
+				E06ECC251F93C75900C7D717 /* UserService.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -407,8 +416,10 @@
 				E06ECC201F93C6F300C7D717 /* FirebaseCRUD.swift in Sources */,
 				E06ECBE41F93B53000C7D717 /* LoginViewController.swift in Sources */,
 				E06ECC011F93BCA400C7D717 /* TwitterAuth.swift in Sources */,
+				E06ECC281F93C78000C7D717 /* NetworkDependencies.swift in Sources */,
 				E06ECBF41F93BC0F00C7D717 /* FacebookTokenFetcher.swift in Sources */,
 				E06ECBFD1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift in Sources */,
+				E06ECC261F93C75900C7D717 /* UserService.swift in Sources */,
 				E06ECBF81F93BC4600C7D717 /* GoogleTokenFetcher.swift in Sources */,
 				E06ECBDF1F93B4F700C7D717 /* RootCoordinator.swift in Sources */,
 				E06ECBF61F93BC2500C7D717 /* FacebookAuth.swift in Sources */,
@@ -421,6 +432,7 @@
 				E0EF6BC41F93AFB1009E9325 /* AppDelegate.swift in Sources */,
 				E06ECBF01F93B79300C7D717 /* UIView.swift in Sources */,
 				E06ECBFF1F93BC9300C7D717 /* TwitterTokenFetcher.swift in Sources */,
+				E06ECC241F93C74C00C7D717 /* NetworkServiceProtocols.swift in Sources */,
 				E06ECC221F93C71500C7D717 /* Loggable.swift in Sources */,
 				E06ECBE11F93B51A00C7D717 /* Coordinator.swift in Sources */,
 			);

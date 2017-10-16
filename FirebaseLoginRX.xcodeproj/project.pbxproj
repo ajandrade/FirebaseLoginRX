@@ -117,49 +117,53 @@
 		E06ECBD21F93B3E500C7D717 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */,
 				E06ECBF51F93BC2500C7D717 /* FacebookAuth.swift */,
 				E06ECBF91F93BC5700C7D717 /* GoogleAuth.swift */,
-				E06ECC001F93BCA400C7D717 /* TwitterAuth.swift */,
-				E06ECC1D1F93C6AC00C7D717 /* EmailAuth.swift */,
 				E06ECC271F93C78000C7D717 /* NetworkDependencies.swift */,
+				E06ECC001F93BCA400C7D717 /* TwitterAuth.swift */,
 			);
 			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E06ECBD31F93B3F000C7D717 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */,
 				E06ECBF11F93B9B100C7D717 /* GoogleService-Info.plist */,
 				E0EF6BCF1F93AFB1009E9325 /* Info.plist */,
-				E0EF6BCA1F93AFB1009E9325 /* Assets.xcassets */,
 				E06ECBD91F93B42A00C7D717 /* Launch Screen.storyboard */,
 			);
 			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E06ECBD41F93B3FA00C7D717 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				E06ECBDB1F93B4CB00C7D717 /* Root */,
 				E06ECBDC1F93B4D000C7D717 /* Login */,
 				E06ECBDD1F93B4D300C7D717 /* LoginFinished */,
+				E06ECBDB1F93B4CB00C7D717 /* Root */,
 			);
 			name = Application;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		E06ECBD51F93B40000C7D717 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				E06ECBEE1F93B77900C7D717 /* UI */,
+				E06ECC311F93EE8C00C7D717 /* Alertable.swift */,
 				E06ECBE01F93B51A00C7D717 /* Coordinator.swift */,
+				E06ECC2B1F93ECAB00C7D717 /* CustomSpinnerViewable.swift */,
 				E06ECC1F1F93C6F300C7D717 /* FirebaseCRUD.swift */,
 				E06ECC211F93C71500C7D717 /* Loggable.swift */,
-				E06ECC2D1F93ED9700C7D717 /* Registrable.swift */,
 				E06ECC231F93C74C00C7D717 /* NetworkServiceProtocols.swift */,
-				E06ECC2B1F93ECAB00C7D717 /* CustomSpinnerViewable.swift */,
-				E06ECC311F93EE8C00C7D717 /* Alertable.swift */,
+				E06ECC2D1F93ED9700C7D717 /* Registrable.swift */,
 			);
 			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E06ECBD61F93B40800C7D717 /* Extensions */ = {
@@ -170,6 +174,7 @@
 				E06ECC2F1F93EDB000C7D717 /* User.swift */,
 			);
 			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E06ECBD71F93B40F00C7D717 /* Helpers */ = {
@@ -178,6 +183,7 @@
 				E06ECC291F93EAE500C7D717 /* EmailHelper.swift */,
 			);
 			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E06ECBD81F93B41500C7D717 /* Network */ = {
@@ -185,11 +191,12 @@
 			children = (
 				E06ECBF31F93BC0F00C7D717 /* FacebookTokenFetcher.swift */,
 				E06ECBF71F93BC4600C7D717 /* GoogleTokenFetcher.swift */,
-				E06ECBFE1F93BC9300C7D717 /* TwitterTokenFetcher.swift */,
 				E06ECC1B1F93C69600C7D717 /* LoginService.swift */,
+				E06ECBFE1F93BC9300C7D717 /* TwitterTokenFetcher.swift */,
 				E06ECC251F93C75900C7D717 /* UserService.swift */,
 			);
 			name = Network;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E06ECBDB1F93B4CB00C7D717 /* Root */ = {
@@ -199,37 +206,41 @@
 				E06ECBDE1F93B4F700C7D717 /* RootCoordinator.swift */,
 			);
 			name = Root;
+			path = Root;
 			sourceTree = "<group>";
 		};
 		E06ECBDC1F93B4D000C7D717 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */,
 				E06ECBE21F93B53000C7D717 /* LoginViewController.swift */,
 				E06ECBE31F93B53000C7D717 /* LoginViewController.xib */,
-				E06ECBE61F93B53F00C7D717 /* LoginCoordinator.swift */,
 				E06ECBE81F93B6DF00C7D717 /* LoginViewModel.swift */,
 			);
 			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		E06ECBDD1F93B4D300C7D717 /* LoginFinished */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECC371F93F05A00C7D717 /* LoginFinishedCoordinator.swift */,
 				E06ECC331F93EF5000C7D717 /* LoginFinishedViewController.swift */,
 				E06ECC341F93EF5000C7D717 /* LoginFinishedViewController.xib */,
-				E06ECC371F93F05A00C7D717 /* LoginFinishedCoordinator.swift */,
 				E06ECC391F93F06300C7D717 /* LoginFinishedViewModel.swift */,
 			);
 			name = LoginFinished;
+			path = LoginFinished;
 			sourceTree = "<group>";
 		};
 		E06ECBEE1F93B77900C7D717 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E06ECBEA1F93B75C00C7D717 /* Roundable.swift */,
 				E06ECBEC1F93B77100C7D717 /* Bordable.swift */,
+				E06ECBEA1F93B75C00C7D717 /* Roundable.swift */,
 			);
 			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		E06ECBFB1F93BC6500C7D717 /* Rx */ = {
@@ -238,6 +249,7 @@
 				E06ECBFC1F93BC6D00C7D717 /* GoogleSignIn+Rx.swift */,
 			);
 			name = Rx;
+			path = Rx;
 			sourceTree = "<group>";
 		};
 		E06ECC3B1F93F16200C7D717 /* Navigation */ = {
@@ -247,15 +259,16 @@
 				E06ECC3E1F93F18400C7D717 /* Navigator.swift */,
 			);
 			name = Navigation;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		E0EF6BB71F93AFB1009E9325 = {
 			isa = PBXGroup;
 			children = (
 				E0EF6BC21F93AFB1009E9325 /* FirebaseLoginRX */,
-				E0EF6BC11F93AFB1009E9325 /* Products */,
-				E436BCF650FB99D691A2BAEB /* Pods */,
 				D270611FD470B7A0A9A7D78F /* Frameworks */,
+				E436BCF650FB99D691A2BAEB /* Pods */,
+				E0EF6BC11F93AFB1009E9325 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,13 +283,13 @@
 		E0EF6BC21F93AFB1009E9325 /* FirebaseLoginRX */ = {
 			isa = PBXGroup;
 			children = (
+				E06ECBD41F93B3FA00C7D717 /* Application */,
+				E06ECBD61F93B40800C7D717 /* Extensions */,
+				E06ECBD71F93B40F00C7D717 /* Helpers */,
+				E06ECBD21F93B3E500C7D717 /* Models */,
 				E06ECC3B1F93F16200C7D717 /* Navigation */,
 				E06ECBD81F93B41500C7D717 /* Network */,
-				E06ECBD71F93B40F00C7D717 /* Helpers */,
-				E06ECBD61F93B40800C7D717 /* Extensions */,
 				E06ECBD51F93B40000C7D717 /* Protocols */,
-				E06ECBD41F93B3FA00C7D717 /* Application */,
-				E06ECBD21F93B3E500C7D717 /* Models */,
 				E06ECBD31F93B3F000C7D717 /* Resources */,
 			);
 			path = FirebaseLoginRX;
@@ -592,7 +605,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P8WVW27EH5;
-				INFOPLIST_FILE = FirebaseLoginRX/Info.plist;
+				INFOPLIST_FILE = FirebaseLoginRX/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amadeuandrade.FirebaseLoginRX;
@@ -607,7 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P8WVW27EH5;
-				INFOPLIST_FILE = FirebaseLoginRX/Info.plist;
+				INFOPLIST_FILE = FirebaseLoginRX/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amadeuandrade.FirebaseLoginRX;
